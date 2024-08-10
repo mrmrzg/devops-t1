@@ -21,5 +21,5 @@ pipeline {
                 echo 'run the integration tests'
                 sh 'npm run test:integration'
             }
-        }                }
+        }/n                }
 }
