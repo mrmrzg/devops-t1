@@ -16,11 +16,11 @@ pipeline {
             }
         }
 
-        stage('Integration Testssss') {
+        stage('Integration Tests') {
             steps {
                 echo 'run the integration tests'
                 sh 'npm run test:integration'
             }
         }
-                }
+    }
 }
