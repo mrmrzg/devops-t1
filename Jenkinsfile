@@ -16,7 +16,7 @@ pipeline {
             }
         }
 
-        stage('Integration Tests') {
+        stage('Integration Testssss') {
             steps {
                 echo 'run the integration tests'
                 sh 'npm run test:integration'
