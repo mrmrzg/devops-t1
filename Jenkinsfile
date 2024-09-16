@@ -20,9 +20,9 @@ pipeline {
             }
         }
 
-        stage('Debloy') {
+        stage('Deployment') {
             steps {
-                echo 'deploy'
+                echo 'run deployment'
             }
         }
     }
