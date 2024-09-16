@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'install the npm packages'
+                echo 'install the npm packages ss'
                 sh 'npm i'
             }
         }
@@ -20,6 +20,13 @@ pipeline {
             steps {
                 echo 'run the integration tests'
                 sh 'npm run test:integration'
+            }
+        }
+
+        stage('Debloy') {
+            steps {
+                echo 'deploy'
+                sh ''
             }
         }
     }
