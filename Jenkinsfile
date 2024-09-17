@@ -7,9 +7,19 @@ pipeline {
             description: 'Email address to send notification' )
     }
     stages{
-        stage("Test-Stage") { 
+        stage("build") { 
             steps {
-                echo "This is the test stage for Testing Jenkins Job notification"
+                echo "run npm i"
+            }
+        }
+        stage("test") { 
+            steps {
+                echo "test runed"
+            }
+        }
+        stage("deploy") { 
+            steps {
+                echo "deploy runed"
             }
         }
     }
