@@ -3,23 +3,28 @@ pipeline {
     parameters {
         string(
             name: 'email', 
-            defaultValue: 'test@ttt.com', 
+            defaultValue: 'test@gmail.com', 
             description: 'Email address to send notification' )
     }
-    stages{
-        stage("build") { 
+      stages {
+        stage('Build') {
             steps {
-                echo "run npm i"
+                echo 'install the npm packages'
+                sh 'npm i'
             }
         }
-        stage("test") { 
+
+        stage('Unit Tests') {
             steps {
-                echo "test runed"
+                echo 'run the unit tests'
+                sh 'npm run test:unit'
             }
         }
-        stage("deploy") { 
+
+        stage('Integration Tests') {
             steps {
-                echo "deploy runed"
+                echo 'run the integration tests'
+                sh 'npm run test:integration'
             }
         }
     }
